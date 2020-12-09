@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragment/header :: headerscripts">
+    <title>Zen Dash || Home</title>
+</head>
+<body class="dark-edition">
+<!-- =============== Material ================ -->
+<!-- ============= default navbar ============ -->
+<nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+                Welcome to Your personal ZnDash </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="material-icons">apps</i> Template
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div th:text="${user.firstname}">
+
+</div>
+<div class="page-header header-filter" data-parallax="true"
+     style="background-image: url('images/eric-garcia-gCYler8QUFE-unsplash.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="brand text-center">
+                    <h1 th:text="${'Welcome to your personal ZenDash' + #httpServletRequest.remoteUser}">Your title here</h1>
+                    <!--  <h2 th:text="${'Welcome to ZenDash ' + #httpServletRequest.remoteUser}"></h2> -->
+                    <h3 class="title text-center">Subtitle</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<table>
+    <tr>
+        <td>Username</td>
+        <td><span sec:authentication="name"></span></td>
+    </tr>
+    <tr>
+        <td>Authorities</td>
+        <td><span sec:authentication="principal.authorities"></span></td>
+    </tr>
+</table>
+<div class="main main-raised">
+    <div class="container">
+        <div class="section text-center">
+            <h2 class="title">Your main section here</h2>
+        </div>
+    </div>
+</div>
+
+<!-- =============== Material ================ -->
+<!-- ============= default navbar ============ -->
+<nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
+                Material Kit </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="material-icons">apps</i> Template
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="page-header header-filter" data-parallax="true" style="background-image: "
+/assets/img/bg3.jpg">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 ml-auto mr-auto">
+            <div class="brand text-center">
+                <h1>Your title here</h1>
+                <h3 class="title text-center">Subtitle</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="main main-raised">
+    <div class="container">
+        <div class="section text-center">
+            <h2 class="title">Your main section here</h2>
+        </div>
+    </div>
+</div>
+
+<!-- ================= Material ================ -->
+<!-- ============== Footer Scripts ============= -->
+<!--<div th:replace="fragment/content :: cardone"></div> -->
+
+
+<!-- =============== Material ================ -->
+<!-- ================= Footer ================== -->
+<div th:replace="fragment/content :: footer"></div>
+<div th:replace="fragment/content :: footerscripts"></div>
+</body>
+</html>

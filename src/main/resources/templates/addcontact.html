@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<meta charset="UTF-8">
+<head th:replace="fragments/header :: headerelement">
+    <title>Zen Dash</title>
+</head>
+<body class="dark-edition">
+<div th:replace="fragments/header :: purple-navbar"></div>
+<!-- ============= Material Address Form ================= -->
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="firstName4">Firstname</label>
+            <input type="text" name="firstName4" class="form-control" id="firstName4" placeholder="First Name">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="lastName4">Lastname</label>
+                <input type="text" name="lastName4" class="form-control" id="lastName4" placeholder="Last Name">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" name="inputEmail4" class="form-control" id="inputEmail4" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="password" name="dateOfBirth" class="form-control" id="dateOfBirth"
+                       placeholder="dateOfBirth">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="inputAddress2">Zip Code</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="inputState">City</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2 ml-auto">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" value="">
+                    Check me out
+                    <span class="form-check-sign">
+            <span class="check"></span>
+          </span>
+                </label>
+            </div>
+        </div>
+    </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+</form>
+
+<!-- ============ Material ============= -->
+<!-- =============  Card  ============== -->
+<div th:replace="fragments/content :: cards"></div>
+<div th:replace="fragments/content :: footer"></div>
+<div th:replace="fragments/content :: footerscripts"></div>
+
+</body>
+</html>

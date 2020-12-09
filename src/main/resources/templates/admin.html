@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="fragments/header :: headerelement">
+    <meta charset="UTF-8">
+    <title>ZenDash || Admin </title>
+</head>
+<body class="dark-edition">
+<div th:replace="fragments/header :: purple-navbar"></div>
+
+<div th:text="">
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><span sec:authentication="name"></span></td>
+        </tr>
+        <tr>
+            <td>Authorities</td>
+            <td><span sec:authentication="principal.authorities"></span></td>
+        </tr>
+    </table>
+</div>
+<!-- =============== Material ================ -->
+<!-- ============ footer & scripts =========== -->
+<div th:replace="fragments/content :: footer"></div>
+<div th:replace="fragments/content :: footerscripts"></div>
+</body>
+</html>
